@@ -27,6 +27,9 @@ $userRole = $_SESSION['role'] ?? null;
                 <ul class="navbar-nav me-auto">
                     <?php if ($userRole === 'admin'): ?>
                         <li class="nav-item">
+                            <a class="nav-link" href="/ebook/index.php">Beranda</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="/ebook/public/dashboard.php">Dashboard</a>
                         </li>
                         <li class="nav-item">
@@ -40,7 +43,10 @@ $userRole = $_SESSION['role'] ?? null;
                         </li>
                     <?php elseif ($userRole === 'user'): ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="/ebook/public/user_dashboard.php">Beranda</a>
+                            <a class="nav-link" href="/ebook/index.php">Beranda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/ebook/public/user_dashboard.php">Dashboard</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/ebook/public/daftar_buku.php">Buku</a>
